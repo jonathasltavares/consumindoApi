@@ -20,10 +20,15 @@ export class AppComponent implements OnInit{
     this.clientesServices.getAll().subscribe((clientes) => (this.clientes$ = clientes))
   }
   cadastrarClientes(){
-    let nome = document.getElementById("nome") as HTMLInputElement;
-    let cliente = {
+    let nome = document.getElementById("nomeinput") as HTMLInputElement;
+    if(nome.value =="" || nome ==null){
+      
+    }else{
+      let cliente = {
       nome: nome.value
-    }
+      }
     this.clientesServices.save(cliente).subscribe()
+    }
   }
+
 }

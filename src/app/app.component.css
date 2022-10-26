@@ -1,12 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 body{
-    background-color: rgb(255, 92, 181);
+    background-color: #3287c1;
+    background-size:contain;
     font: normal 15pt arial;
+    width: auto;
+    height: fit-content;
 
 }
 header{
-    color:black;
     text-align: center;
-
+}
+h1{
+    font-family: 'Anton', sans-serif;
+    color: white;
+    text-shadow: rgb(148, 148, 148) 1px 0 10px;
 }
 section{
     background-color: white;
@@ -24,5 +31,5 @@ footer{
     color: white;
     text-align: center;
     font-style: italic;
-
+    margin: 10px;
 }
