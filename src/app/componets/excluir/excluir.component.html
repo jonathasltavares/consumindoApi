@@ -1,0 +1,40 @@
+<section>
+    <form data-dds="form" class="dds__form dds__container">
+      
+      <div class="dds__input-text__container">
+        <label id="text-input-label-428675678" for="text-input-control-428675678">ID do cliente</label>
+        <div class="dds__input-text__wrapper dds__input-text__wrapper--button">
+          <input
+            type="number"
+            class="dds__input-text"
+            name="text-input-control-428675678"
+            placeholder="digite o id do cliente"
+            id="IDinput"
+            required=""
+            aria-labelledby="text-input-label-428675678 text-input-helper-428675678"
+          />
+          <button class="dds__button" type="button" (click)="excluirCliente()">Excluir</button>
+          <div id="text-input-error-428675678" class="dds__invalid-feedback">Error Message</div>
+        </div>
+      </div>
+    </form>
+
+    
+
+    <table id="" class="dds__table">
+      <thead>
+        <tr class="dds__thead">
+          <th class="dds__th">ID</th>
+          <th class="dds__th">Nome</th>
+        </tr>
+      </thead>
+      <tbody *ngIf="clientes$">
+        <tr class="dds__tr" *ngFor="let item of clientes$">
+          <td class="dds__td">{{item.id}}</td>
+          <td class="dds__td">{{item.nome}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+

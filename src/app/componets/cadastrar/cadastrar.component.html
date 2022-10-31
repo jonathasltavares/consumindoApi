@@ -1,0 +1,35 @@
+<section>
+    <form data-dds="form" class="dds__form dds__container">
+      
+      <div class="dds__input-text__container">
+        <label id="text-input-label-428675678" for="text-input-control-428675678">Nome do cliente</label>
+        <div class="dds__input-text__wrapper dds__input-text__wrapper--button">
+          <input
+            type="text"
+            class="dds__input-text"
+            name="text-input-control-428675678"
+            id="nomeinput"
+            placeholder="digite o nome do cliente"
+            required=""
+            aria-labelledby="text-input-label-428675678 text-input-helper-428675678"
+          />
+          <button class="dds__button" type="submit" (click)="cadastrarClientes()">Cadastrar</button>
+          <div id="text-input-error-428675678" class="dds__invalid-feedback">Error Message</div>
+        </div>
+      </div>
+    </form>
+    <table id="" class="dds__table">
+      <thead>
+        <tr class="dds__thead">
+          <th class="dds__th">ID</th>
+          <th class="dds__th">Nome</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="dds__tr" *ngFor="let item of clientes$">
+          <td class="dds__td">{{item.id}}</td>
+          <td class="dds__td">{{item.nome}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>

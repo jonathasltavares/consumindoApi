@@ -1,0 +1,52 @@
+<section>
+    <form data-dds="form" class="dds__form dds__container">
+      
+      <div class="dds__input-text__container">
+        <label id="text-input-label-428675678" for="text-input-control-428675678">ID do cliente</label>
+        <div class="dds__input-text__wrapper dds__input-text__wrapper--button">
+          <input
+            type="number"
+            class="dds__input-text"
+            name="text-input-control-428675678"
+            id="IDinput"
+            placeholder="digite o id do cliente"
+            required=""
+            aria-labelledby="text-input-label-428675678 text-input-helper-428675678"
+          />
+          <button class="dds__button" type="button" (click)="procurarCliente()">Procurar</button>
+          <div id="text-input-error-428675678" class="dds__invalid-feedback">Error Message</div>
+        </div>
+      </div>
+    </form>
+    
+    <div
+    data-dds="message-bar"
+    role="dialog"
+    aria-describedby="MessageBar__content-id--219538867"
+    aria-labelledby="MessageBar__title-id--468810146"
+    class="dds__message-bar"
+    data-dismissible="true"
+    *ngIf="clientes$ && clientes$ =='naoencontrado'"
+    >
+    <i class="dds__icon dds__message-bar__icon dds__icon--alert-info-cir" aria-hidden="true"></i>
+    <div id="MessageBar__content-id--219538867" class="dds__message-bar__content">
+      <b id="MessageBar__title-id--468810146">Aviso:</b>
+      Cliente não encontrado.
+    </div>
+    </div>
+    <table id="" class="dds__table" *ngIf="clientes$ && clientes$ !='naoencontrado'">
+      <thead>
+        <tr class="dds__thead">
+          <th class="dds__th">ID</th>
+          <th class="dds__th">Nome</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="dds__tr">
+          <td class="dds__td">{{clientes$.id}}</td>
+          <td class="dds__td">{{clientes$.nome}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
